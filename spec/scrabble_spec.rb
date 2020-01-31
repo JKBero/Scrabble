@@ -41,7 +41,7 @@ describe Scrabble do
       expect(scrabble.score).to eq 2
     end
 
-    it 'returns the correct points when give a word with 1 and 2 point characters' do
+    it 'returns the correct points when given a word with 1 and 2 point characters' do
       scrabble = Scrabble.new('god')
       expect(scrabble.score).to eq 5
       scrabble = Scrabble.new('rusting')
@@ -57,6 +57,26 @@ describe Scrabble do
       expect(scrabble.score).to eq 3
       scrabble = Scrabble.new('p')
       expect(scrabble.score).to eq 3
+    end
+
+    it 'returns the correct points when given a word with 1,2 and 3 point characters' do
+      scrabble = Scrabble.new('stripe')
+      expect(scrabble.score).to eq 8
+      scrabble = Scrabble.new('dome')
+      expect(scrabble.score).to eq 7
+    end
+
+    it 'returns 4 when given a character worth 4 points' do
+      scrabble = Scrabble.new('f')
+      expect(scrabble.score).to eq 4
+      scrabble = Scrabble.new('h')
+      expect(scrabble.score).to eq 4
+      scrabble = Scrabble.new('v')
+      expect(scrabble.score).to eq 4
+      scrabble = Scrabble.new('w')
+      expect(scrabble.score).to eq 4
+      scrabble = Scrabble.new('y')
+      expect(scrabble.score).to eq 4
     end
 
   end

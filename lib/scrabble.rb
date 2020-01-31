@@ -18,13 +18,20 @@ class Scrabble
       'b' => 3,
       'c' => 3,
       'm' => 3,
-      'p' => 3
+      'p' => 3,
+      'f' => 4,
+      'h' => 4,
+      'v' => 4,
+      'w' => 4,
+      'y' => 4
     }
   end
 
   def score
     @word.chars.reduce(0) do |score, char|
+      if @points[char]
         score += @points[char]
+      end
     end
   end
 
