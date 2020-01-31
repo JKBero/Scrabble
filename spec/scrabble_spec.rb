@@ -32,6 +32,17 @@ describe Scrabble do
       expect(scrabble.score).to eq 8
     end
 
+    it 'returns 3 when given a character worth 3 points' do
+      scrabble = Scrabble.new('b')
+      expect(scrabble.score).to eq 3
+      scrabble = Scrabble.new('c')
+      expect(scrabble.score).to eq 3
+      scrabble = Scrabble.new('m')
+      expect(scrabble.score).to eq 3
+      scrabble = Scrabble.new('p')
+      expect(scrabble.score).to eq 3
+    end
+
   end
 
 end
