@@ -122,6 +122,13 @@ describe Scrabble do
       expect(scrabble.score).to eq 0
     end
 
+    it 'returns the correct score if given a word containing capital letters' do
+      scrabble = Scrabble.new('OXYPHENBUTAZONE')
+      expect(scrabble.score).to eq 41
+      scrabble = Scrabble.new('TiDy')
+      expect(scrabble.score).to eq 8
+    end
+
   end
 
 end
