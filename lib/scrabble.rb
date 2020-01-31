@@ -33,10 +33,12 @@ class Scrabble
   end
 
   def score
+    return 0 unless @word
     @word.chars.reduce(0) do |score, char|
       if @points[char]
         score += @points[char]
       end
+      score
     end
   end
 

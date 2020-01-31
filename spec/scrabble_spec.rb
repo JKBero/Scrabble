@@ -105,6 +105,23 @@ describe Scrabble do
       expect(scrabble.score).to eq 14
     end
 
+    it 'returns 0 if given an empty string' do
+      scrabble = Scrabble.new('')
+      expect(scrabble.score).to eq 0
+    end
+
+    it 'returns 0 if given invalid words' do
+      scrabble = Scrabble.new(" \t\n")
+      expect(scrabble.score).to eq 0
+      scrabble = Scrabble.new("36")
+      expect(scrabble.score).to eq 0
+    end
+
+    it 'returns 0 if given nil' do
+      scrabble = Scrabble.new(nil)
+      expect(scrabble.score).to eq 0
+    end
+
   end
 
 end
