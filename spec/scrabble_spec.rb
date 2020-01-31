@@ -84,11 +84,18 @@ describe Scrabble do
       expect(scrabble.score).to eq 5
     end
 
-    it 'returns 6 when given a character worth 6 points' do
+    it 'returns 8 when given a character worth 8 points' do
       scrabble = Scrabble.new('j')
-      expect(scrabble.score).to eq 6
+      expect(scrabble.score).to eq 8
       scrabble = Scrabble.new('x')
-      expect(scrabble.score).to eq 6
+      expect(scrabble.score).to eq 8
+    end
+
+    it 'returns 10 when given a character worth 10 points' do
+      scrabble = Scrabble.new('q')
+      expect(scrabble.score).to eq 10
+      scrabble = Scrabble.new('z')
+      expect(scrabble.score).to eq 10
     end
 
   end
