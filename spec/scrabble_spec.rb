@@ -9,6 +9,22 @@ describe Scrabble do
       expect(scrabble.score).to eq 1
       scrabble = Scrabble.new('e')
       expect(scrabble.score).to eq 1
+      scrabble = Scrabble.new('i')
+      expect(scrabble.score).to eq 1
+      scrabble = Scrabble.new('o')
+      expect(scrabble.score).to eq 1
+      scrabble = Scrabble.new('u')
+      expect(scrabble.score).to eq 1
+      scrabble = Scrabble.new('l')
+      expect(scrabble.score).to eq 1
+      scrabble = Scrabble.new('n')
+      expect(scrabble.score).to eq 1
+      scrabble = Scrabble.new('r')
+      expect(scrabble.score).to eq 1
+      scrabble = Scrabble.new('s')
+      expect(scrabble.score).to eq 1
+      scrabble = Scrabble.new('t')
+      expect(scrabble.score).to eq 1
     end
 
     it 'returns the correct points when given a word with only 1 point characters' do
