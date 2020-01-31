@@ -21,6 +21,13 @@ describe Scrabble do
       expect(scrabble.score).to eq 6
     end
 
+    it 'returns 2 when given a character worth 2 points' do
+      scrabble = Scrabble.new('d')
+      expect(scrabble.score).to eq 2
+      scrabble = Scrabble.new('g')
+      expect(scrabble.score).to eq 2
+    end
+
   end
 
 end
