@@ -5,8 +5,13 @@ class Scrabble
   end
 
   def score
-    return 2 if @word == 'd' || @word == 'g'
-    @word.length
+    @word.chars.reduce(0) do |score, char|
+      if char == 'd' || char == 'g'
+        score += 2
+      else
+        score += 1
+      end
+    end
   end
 
 end

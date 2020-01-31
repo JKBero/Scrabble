@@ -11,12 +11,9 @@ describe Scrabble do
       expect(scrabble.score).to eq 1
     end
 
-    it 'returns 2 points when given a word with two 1 point characters' do
+    it 'returns the correct points when given a word with only 1 point characters' do
       scrabble = Scrabble.new('at')
       expect(scrabble.score).to eq 2
-    end
-
-    it 'returns 6 points when given a word with six 1 point characters' do
       scrabble = Scrabble.new('street')
       expect(scrabble.score).to eq 6
     end
@@ -26,6 +23,13 @@ describe Scrabble do
       expect(scrabble.score).to eq 2
       scrabble = Scrabble.new('g')
       expect(scrabble.score).to eq 2
+    end
+
+    it 'returns the correct points when give a word with 1 and 2 point characters' do
+      scrabble = Scrabble.new('god')
+      expect(scrabble.score).to eq 5
+      scrabble = Scrabble.new('rusting')
+      expect(scrabble.score).to eq 8
     end
 
   end
