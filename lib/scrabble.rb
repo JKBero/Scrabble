@@ -5,8 +5,7 @@ class Scrabble
   end
 
   def score
-    return 2 if @word == 'at'
-    1
+    @word.length
   end
 
 end

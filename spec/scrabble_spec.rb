@@ -16,6 +16,11 @@ describe Scrabble do
       expect(scrabble.score).to eq 2
     end
 
+    it 'returns 6 points when given a word with six 1 point characters' do
+      scrabble = Scrabble.new('street')
+      expect(scrabble.score).to eq 6
+    end
+
   end
 
 end
