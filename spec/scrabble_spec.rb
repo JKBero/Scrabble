@@ -98,6 +98,13 @@ describe Scrabble do
       expect(scrabble.score).to eq 10
     end
 
+    it 'returns the correct points when given a word' do
+      scrabble = Scrabble.new('quirky')
+      expect(scrabble.score).to eq 22
+      scrabble = Scrabble.new('cabbage')
+      expect(scrabble.score).to eq 14
+    end
+
   end
 
 end
